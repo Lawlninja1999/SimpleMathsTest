@@ -20,7 +20,9 @@ namespace SimpleMathsTest
             Console.Clear();
             int wrong = 3;
             int score = 0;
-           
+            Console.WriteLine("what is your Username?");
+           string Username= Console.ReadLine();
+            Console.Clear();
             while (wrong>0)
             {
                
@@ -32,17 +34,17 @@ namespace SimpleMathsTest
                
                 if (score>=3)
                 {
-                     whaa = 2;
-                    value1 = random.Next(1, 20);
-                    value2 = random.Next(1, 20);
-                }
-                else if (score >=6)
-                {
-                    whaa = 3;
+                     whaa = 3;
                     value1 = random.Next(2, 10);
                     value2 = random.Next(2, 10);
                 }
-                else if (score >= 9)
+                 if (score>=6)
+                {
+                    whaa = 2;
+                    value1 = random.Next(1, 20);
+                    value2 = random.Next(1, 20);
+                }
+                 if (score>=9)
                 {
                     whaa = 4;
                     value1 = random.Next(3, 10);
@@ -62,10 +64,12 @@ namespace SimpleMathsTest
                 Console.WriteLine($"{wrong} tries to go");
                 Console.WriteLine($"your current score is {score}");
                 Console.WriteLine("Enter Answer");
-                int answer = int.Parse(Console.ReadLine());
+                int num;
+                int.TryParse(Console.ReadLine(), out num);
              
-                if (answer == value2 + value1 && whaa == 1 || answer == value1 - value2 && whaa == 2 ||
-                    answer == value2 * value1 && whaa == 3)
+                if (num == value2 + value1 && whaa == 1 || num == value1 - value2 && whaa == 2 ||
+                    num == value2 * value1 && whaa == 3 ||
+                    num == value1+(value1* value2)- value1 && whaa == 4)
                 {
                     Console.Clear();
                    
@@ -78,10 +82,11 @@ namespace SimpleMathsTest
                     wrong--;
                     if(wrong==0)
                     {
-                        Console.WriteLine("out of turns"); ;
+                        Console.WriteLine($"Hello {Username}, Your final score was {score}, try again next time"); 
                     }
                    
                 }
+              
                
                 
             }
