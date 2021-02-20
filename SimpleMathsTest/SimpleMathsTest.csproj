@@ -45,9 +45,16 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkerClassAndFactory\Factory\FactoryClass.cs" />
+    <Compile Include="WorkerClassAndFactory\Interface\Calculations.cs" />
+    <Compile Include="WorkerClassAndFactory\Worker\Add.cs" />
+    <Compile Include="WorkerClassAndFactory\Worker\Harder.cs" />
+    <Compile Include="WorkerClassAndFactory\Worker\multiply.cs" />
+    <Compile Include="WorkerClassAndFactory\Worker\Sub.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
