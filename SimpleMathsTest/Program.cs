@@ -22,6 +22,8 @@ namespace SimpleMathsTest
             int score = 0;
             Console.WriteLine("what is your Username?");
            string Username= Console.ReadLine();
+            Console.WriteLine("what is your Password?");
+            string Password = Console.ReadLine();
             Console.Clear();
             while (wrong>0)
             {
